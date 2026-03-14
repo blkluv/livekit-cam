@@ -1,27 +1,66 @@
+Linkees **Experimental** Branch 🔬💻
 
-# مشروع: ربط 6 غرف LiveKit مع تكوين بث مشاهدة مركّب (نسخة مطوّرة)
+> ⚠️ Warning <br/> <br/>
+> This branch of Linkees is for experimental purposes only and is not intended for production use. Most of the components in this branch are broken and may not function as expected.
 
-- إنشاء جلسة مشاهدة جديدة من لوحة **admin** مع اختيار 1..6 كاميرات و/أو مايكات من غرف المدن.
-- دمج الفيديو (Canvas 1080p) ومكس الصوت (WebAudio) ونشر نتيجة واحدة في غرفة مشاهدة جديدة.
-- **تطبيق التغييرات** على نفس الغرفة أثناء البث، و**إيقاف البث** عند الحاجة.
-- **VU Meters** لمستويات الصوت لكل مدينة.
-- **حفظ الجلسات** في `data/watchSessions.json`.
+<table>
+<tr >
+    <th><img src="https://s3.us-east-2.amazonaws.com/fueler.io-images/fueler-creatons/ZO3GUmNNWMJL8vuRQMQIDs7ConJCktJOOo0xTjgr.png" width="50px" height="50px" style="display:inline-block; "/></th>
+    <th><h1>&ensp;Linkees</h1></th>
+</tr>
+</table>
 
-## الإعداد
-1) أنسخ `.env.example` إلى `.env` وعدّل مفاتيح LiveKit.
-2) ثبّت الحزم ثم شغّل:
-```bash
-npm i
-npm run dev
+[![Generic badge](https://img.shields.io/badge/BUILD-Success-<COLOR>.svg?logo=github)](https://vercel.com/heysagnik/bio/deployments) [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/heysagnik.svg?style=social&label=Follow%20%40heysagnik)](https://twitter.com/heysagnik)
+
+## About 🎯
+
+A beautiful Single Page Web App made with React to display all your important social links for your followers (Alternative to linktr.ee).
+
+![Screenshot](https://api.microlink.io/?url=https://heysagnik.vercel.app&screenshot=true&meta=false&embed=screenshot.url&waitForTimeout=1500&type=jpeg&overlay.browser=dark&overlay.background=linear-gradient%28225deg%2C+%23FF057C+0%25%2C+%238D0B93+50%25%2C+%23321575+100%25%29)
+
+## How to use ?🤔
+
+install the linkees package
+
 ```
-3) افتح `http://localhost:8080`
+npm install --save linkees
+```
 
-## الدخول
-- admin / admin123
-- مدينة رقم 1 / City1 → city-1
-- ...
-- مدينة رقم 6 / City5 → city-6
-- مشاهد 1..6 / Watch1..Watch6
+import Linkees component from linkees package in your react app
 
-## النشر
-يفضّل GitHub + Koyeb/Render (واجهات + API في نفس السيرفر). يمكن أيضًا Cloudflare Pages + Functions مع تكييف إصدار التوكن.
+```
+import Linkees, { CHANNEL_TYPES } from "linkees";
+```
+
+Create a config for your links
+
+```
+[
+  {
+    title: //title of the link card
+    subtitle: //subtitle of the link card
+    link: //URL
+    type: //channel type
+  }
+]
+```
+
+Example can be found in `example-linktree/src/index.tsx`
+
+Deploy to Vercel or any other platform and Enjoy!
+
+<br>
+
+<br>
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fheysagnik%2FLinkees)
+
+We also support **_Docker 🐳_** .For more details read [this](https://github.com/heysagnik/Linkees/blob/d15c73b40e140249aa58e7354b80e1ae7508ef9f/docker.md).
+
+## Contributing 📝
+
+We always welcome contributions; big or small, it can be documentation updates, adding new checks or something bigger. Please check the Contributing Guide for details on how to help out.
+
+### Special Thanks to those People who have contributed :
+
+<img width="200" src="https://contrib.rocks/image?repo=heysagnik/Linkees" />
