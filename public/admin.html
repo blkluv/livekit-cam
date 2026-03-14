@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" class="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>لوحة المشرف</title>
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- LiveKit UMD -->
+    <script defer src="/vendor/livekit-client.umd.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/livekit-client@2/dist/livekit-client.umd.min.js"
+      defer
+      crossorigin="anonymous"
+      onerror="(function(){var s=document.createElement('script');s.src='https://unpkg.com/livekit-client@latest/dist/livekit-client.umd.js';s.defer=true;document.head.appendChild(s);}())">
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>🛠️ لوحة المشرف (admin)</div>
+      <div class="toolbar">
+        <button id="viewModeBtn" class="btn" type="button">طريقة المشاهدة</button>
+        <button id="applyBtn" class="btn" type="button">تطبيق التغييرات</button>
+        <button id="stopBtn" class="btn danger" type="button" disabled>إيقاف البث</button>
+        <button id="goWatchBtn" class="btn success" type="button" disabled>مشاهدة الآن</button>
+        <label class="badge"><input type="checkbox" id="monitorAudio"> تشغيل صوت المعاينة</label>
+        <button id="logoutBtn" class="btn danger" type="button">خروج</button>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="card">
+        <h3>معاينة غرف المدن (6)</h3>
+        <p class="small">هنا ترى الكاميرات/المايكات عند اتصال كل مدينة.</p>
+        <div id="previewGrid" class="video-grid cols-3"></div>
+      </div>
+    </div>
+
+    <canvas id="mixerCanvas" class="hidden" width="1920" height="1080"></canvas>
+
+    <div id="viewModal" class="modal">
+      <div class="box">
+        <h3>طريقة المشاهدة</h3>
+        <p class="small">اختر عدد الكاميرات للمكس.</p>
+        <div>
+          <label>عدد الكاميرات:</label>
+          <select id="camCount" class="input">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6" selected>6</option>
+          </select>
+        </div>
+        <div id="slots"></div>
+        <hr/>
+        <div class="toolbar">
+          <button id="createWatchBtn" class="btn" type="button">ارتباط للمشاهدة</button>
+          <button id="closeModalBtn" class="btn secondary" type="button">إغلاق</button>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="/common.js?v=8"></script>
+    <script defer src="/admin.js?v=8"></script>
+  </body>
+</html>
