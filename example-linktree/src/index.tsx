@@ -120,7 +120,7 @@ const App = () => {
     <div className="app" style={{ backgroundColor: COLORS.spiritualLight }}>
       <Analytics />
       
-      {/* Header Section */}
+      {/* Header Section - FIXED: Removed extra closing div */}
       <header className="header">
         <h1 className="app-title" style={{ letterSpacing: '2px' }}>NeBruh TV</h1>
         <p className="app-description">
@@ -132,31 +132,30 @@ const App = () => {
         </p>
 
         {/* Social & Direct Mint Buttons */}
-           <a 
-            href="https://deedtube.com" 
-            className="bio-btn tiktok-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            📜 Claim a Deed
-          </a>
-          <a 
-            href="https://tiktok.com/@nebruhtv" 
-            className="bio-btn tiktok-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            📱 @NeBruhTV TikTok
-          </a>
-          <a 
-            href="https://t.me/nebruhtv" 
-            className="bio-btn telegram-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            💬 Telegram Group
-          </a>
-        </div>
+        <a 
+          href="https://deedtube.com" 
+          className="bio-btn tiktok-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          📜 Claim a Deed
+        </a>
+        <a 
+          href="https://tiktok.com/@nebruhtv" 
+          className="bio-btn tiktok-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          📱 @NeBruhTV TikTok
+        </a>
+        <a 
+          href="https://t.me/nebruhtv" 
+          className="bio-btn telegram-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          💬 Telegram Group
+        </a>
       </header>
 
       <CategoryTabs position="top" />
