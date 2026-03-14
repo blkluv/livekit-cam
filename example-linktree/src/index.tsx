@@ -127,7 +127,7 @@ const App = () => {
           🎥 <strong>Challenges</strong> → 📜 <strong>Deeds</strong> → 🕹️ <strong>Games</strong>
           <br />
           <span style={{ fontSize: '0.8rem', opacity: 0.8 }}>
-            Let's see what city has the best content creators and the most Love For They Nebruh
+            Let&apos;s see what city has the best content creators and the most Love For They Nebruhs!
           </span>
         </p>
 
