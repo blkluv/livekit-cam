@@ -24,42 +24,42 @@ const COLORS = {
 const REEL_CATEGORIES = [
   { 
     emoji: "📍 ATL", 
-    label: "LAND", 
+    label: "", 
     color: COLORS.mintGreen,
     ids: ["JdHLFyMfjJ0", "whVlCRbqvWQ", "wQwpriB2EP0"],
     description: "Raw acreage and development plots"
   },
   { 
     emoji: "📍 CHI", 
-    label: "Chicago", 
+    label: "", 
     color: COLORS.bubblegumPink,
     ids: ["48XG8AcVUv4", "5LrQ9I25PRI", "JbQsxbF5v1E"],
     description: "Residential properties and multi-family"
   },
   { 
     emoji: "📍 HOU", 
-    label: "Houston", 
+    label: "", 
     color: COLORS.skyBlue,
     ids: ["WCPJ4zUOM58", "onBHWdVAsIA", "P3O7Qr2St1Y"],
     description: "Industrial and logistics spaces"
   },
   { 
     emoji: "📍 LA", 
-    label: "Los Angeles", 
+    label: "", 
     color: COLORS.pastelYellow,
     ids: ["OPf0YbXqDm0", "E6Dj9bav3lM", "T9U5FbQj7xN"],
     description: "Retail and street-front commercial"
   },
   { 
     emoji: "📍 MIA", 
-    label: "Miami", 
+    label: "", 
     color: COLORS.creativeCoral,
     ids: ["DTO8WF5pjZY", "9bZkp7q19f0", "rFSQfMyrgM4"],
     description: "Corporate suites and coworking hubs"
   },
   { 
     emoji: "📍 NYC", 
-    label: "New York City", 
+    label: "", 
     color: COLORS.lilacPurple,
     ids: ["xOVj-JCwRCY", "dQw4w9WgXcQ", "6BWeiXgG6IA"],
     description: "Parking lots and automotive storage"
