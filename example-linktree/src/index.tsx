@@ -23,43 +23,43 @@ const COLORS = {
 // ================ 🏠 PROPERTY CATEGORIES ================
 const REEL_CATEGORIES = [
   { 
-    emoji: "🏕️", 
+    emoji: "📍 ATL", 
     label: "LAND", 
     color: COLORS.mintGreen,
     ids: ["JdHLFyMfjJ0", "whVlCRbqvWQ", "wQwpriB2EP0"],
     description: "Raw acreage and development plots"
   },
   { 
-    emoji: "🏠", 
-    label: "HOME", 
+    emoji: "📍 CHI", 
+    label: "Chicago", 
     color: COLORS.bubblegumPink,
     ids: ["48XG8AcVUv4", "5LrQ9I25PRI", "JbQsxbF5v1E"],
     description: "Residential properties and multi-family"
   },
   { 
-    emoji: "🏭", 
-    label: "WAREHOUSE", 
+    emoji: "📍 HOU", 
+    label: "Houston", 
     color: COLORS.skyBlue,
     ids: ["WCPJ4zUOM58", "onBHWdVAsIA", "P3O7Qr2St1Y"],
     description: "Industrial and logistics spaces"
   },
   { 
-    emoji: "🏪", 
-    label: "STORE", 
+    emoji: "📍 LA", 
+    label: "Los Angeles", 
     color: COLORS.pastelYellow,
     ids: ["OPf0YbXqDm0", "E6Dj9bav3lM", "T9U5FbQj7xN"],
     description: "Retail and street-front commercial"
   },
   { 
-    emoji: "🏢", 
-    label: "OFFICE", 
+    emoji: "📍 MIA", 
+    label: "Miami", 
     color: COLORS.creativeCoral,
     ids: ["DTO8WF5pjZY", "9bZkp7q19f0", "rFSQfMyrgM4"],
     description: "Corporate suites and coworking hubs"
   },
   { 
-    emoji: "🏟️", 
-    label: "STADIUM", 
+    emoji: "📍 NYC", 
+    label: "New York City", 
     color: COLORS.lilacPurple,
     ids: ["xOVj-JCwRCY", "dQw4w9WgXcQ", "6BWeiXgG6IA"],
     description: "Parking lots and automotive storage"
@@ -84,21 +84,7 @@ const ReelPlayer = ({ id, borderColor }: ReelPlayerProps) => {
           allowFullScreen
         />
       </div>
-      <div className="reel-actions">
-        <button 
-          className="action-button primary-action"
-          onClick={() => window.location.href = `/mint?assetId=${id}`}
-        >
-          <span className="icon">📜</span> Mint Fraction
-        </button>
-
-        <button 
-          className="action-button"
-          onClick={() => window.open(`https://what3words.com/your.location.here`, '_blank')}
-        >
-          <span className="icon">📍</span> GPS Location
-        </button>
-      </div>
+      {/* Actions section removed */}
     </div>
   );
 };
@@ -136,33 +122,34 @@ const App = () => {
       
       {/* Header Section */}
       <header className="header">
-        <h1 className="app-title" style={{ letterSpacing: '2px' }}>DEEDTUBE</h1>
+        <h1 className="app-title" style={{ letterSpacing: '2px' }}>NeBruh TV</h1>
         <p className="app-description">
-          🎥 <strong>Watch Property Tours</strong> → 📜 <strong>Mint Fractional Deeds</strong> → 🏢 <strong>Own the Block.</strong>
+          🎥 <strong>Challenges</strong> → 📜 <strong>Deeds</strong> → 🕹️ <strong>Games</strong>
           <br />
           <span style={{ fontSize: '0.8rem', opacity: 0.8 }}>
-            The first video-driven marketplace for Real World Assets on Bitcoin.
+            Let's see what city has the best content creators and the most Love For They Nebruh
           </span>
         </p>
 
         {/* Social & Direct Mint Buttons */}
-        <div className="bio-actions">
-          <button 
-            className="bio-btn mint-btn"
-            onClick={() => window.location.href = '/mint'}
-          >
-            📜 Mint a Deed
-          </button>
-          <a 
-            href="https://tiktok.com/@DeedTube" 
+           <a 
+            href="https://deedtube.com" 
             className="bio-btn tiktok-btn"
             target="_blank"
             rel="noopener noreferrer"
           >
-            📱 Follow @DeedTube
+            📜 Claim a Deed
           </a>
           <a 
-            href="https://t.me/DeedTube" 
+            href="https://tiktok.com/@nebruhtv" 
+            className="bio-btn tiktok-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📱 @NeBruhTV TikTok
+          </a>
+          <a 
+            href="https://t.me/nebruhtv" 
             className="bio-btn telegram-btn"
             target="_blank"
             rel="noopener noreferrer"
@@ -190,7 +177,7 @@ const App = () => {
       {/* Main CTA */}
       <nav className="services-nav">
         <a 
-          href="/create" 
+          href="https://market.nebruh.com" 
           className="service-link highlight"
           style={{ 
             backgroundColor: COLORS.joyfulOrange,
@@ -198,7 +185,7 @@ const App = () => {
             boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
           }}
         >
-          🚀 Create A Deed
+          🛍️ Market
         </a>
       </nav>
 
